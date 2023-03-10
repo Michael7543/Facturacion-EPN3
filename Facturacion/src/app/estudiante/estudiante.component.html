@@ -1,18 +1,77 @@
 <table class="table table-success">
   <thead>
     <tr>
-      <th scope="col">Id</th>
- 
-      <th>Eliminar</th>
-      <th>Editar</th>
+      <th scope="col">codmat</th>
+      <th scope="col">Materia</th>
+      <th scope="col">Paralelo</th>
+      <th scope="col">Horas</th>
+      <th scope="col">aula</th>
+      <th scope="col">ubicacion</th>
+      <th scope="col">Funcion</th>
+      <th scope="col">Est</th>
+      <th scope="col">nroSesiones</th>
+      <th scope="col">Lunes</th>
+      <th scope="col">Martes</th>
+      <th scope="col">Miercoles</th>
+      <th scope="col">Jueves</th>
+      <th scope="col">Viernes</th>
+      <th scope="col">Sabado</th>
+      <th scope="col">hsimul</th>
+      <th scope="col">fecha Inicio</th>
+      <th scope="col">fecha Fin</th>
+      <th scope="col">Horario</th>
+      <th scope="col">codcar</th>
+      <th scope="col">carrera</th>
+      <th scope="col">Facultad</th>  
     </tr>
-  </thead>
-  <tbody>
-    <tr *ngFor="let estu of estudiante" class="">
-     <td>{{estu}}</td>
-      
-   
+  </thead> 
   
+  <tbody>
+
+    <tr *ngFor="let tabla of estudiante">
+      <td>{{tabla.codmat}}</td>
+      <td>{{tabla.materia}}</td>
+      <td>{{tabla.paralelo}}</td>
+      <td>{{tabla.horas}}</td>
+      <td>{{tabla.aula}}</td>
+      <td>{{tabla.ubicacion}}</td>
+      <td>{{tabla.funcion}}</td>
+      <td>{{tabla.est}}</td>
+      <td>{{tabla.nroSesiones}}</td>
+      <td>{{tabla.lunes}}</td>
+      <td>{{tabla.martes}}</td>
+      <td>{{tabla.miercoles}}</td>
+      <td>{{tabla.jueves}}</td>
+      <td>{{tabla.viernes}}</td>
+      <td>{{tabla.sabado}}</td>
+      <td>{{tabla.hSimul}}</td>
+      <td>{{tabla.fechaI}}</td>
+      <td>{{tabla.fechaF}}</td>
+      <td>{{tabla.horarioF}}</td>
+      <td>{{tabla.codcar}}</td>
+      <td>{{tabla.carrera}}</td>
+      <td>{{tabla.facultad}}</td>
     </tr>
   </tbody>
 </table>
+
+<!-- <p-card header="Simple Card" [style]="{'width': '25rem', 'margin-bottom': '2em'}">
+  <ng-template pTemplate="header">
+      <img alt="Card" src="https://primefaces.org/cdn/primeng/images/usercard.png">
+  </ng-template>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error repudiandae numquam deserunt
+      quisquam repellat libero asperiores earum nam nobis, culpa ratione quam perferendis esse, cupiditate neque quas!</p>
+</p-card>
+
+<p-card header="Advanced Card" subheader="Card Subheader" [style]="{width: '360px'}" styleClass="p-card-shadow">
+  <ng-template pTemplate="header">
+      <img alt="Card" src="https://primefaces.org/cdn/primeng/images/usercard.png">
+  </ng-template>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error repudiandae numquam deserunt
+      quisquam repellat libero asperiores earum nam nobis, culpa ratione quam perferendis esse, cupiditate neque quas!</p>
+  <ng-template pTemplate="footer">
+      <p-button label="Save" icon="pi pi-check"></p-button>
+      <p-button label="Cancel" icon="pi pi-times" styleClass="p-button-secondary" [style]="{'margin-left': '.5em'}"></p-button>
+  </ng-template>
+</p-card>
+ -->

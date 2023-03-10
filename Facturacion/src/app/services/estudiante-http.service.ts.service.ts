@@ -9,7 +9,7 @@ import { EstudianteModel } from '../modules/estudiante.modul';
 export class EstudianteHttpservice{
 
   readonly URL_API: string =
-   'http://172.31.5.24:8080/WSSIIEPN/webresources/SilaboEPN/carga/0501553408/2022/2';
+   'http://172.31.5.24:8080/WSSIIEPN/webresources/SilaboEPN/carga/0703844696/2022/1';
 
   constructor(private httClient: HttpClient) {}
 

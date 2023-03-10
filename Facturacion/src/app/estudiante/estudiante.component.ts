@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { EstudianteModel } from '../modules/estudiante.modul';
 import { EstudianteHttpservice } from '../services/estudiante-http.service.ts.service';
 
+
 @Component({
   selector: 'app-estudiante',
   templateUrl: './estudiante.component.html',
