@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { EstudianteModel } from '../modules/estudiante.modul';
-import { EstudianteHttpservice } from '../services/estudiante-http.service.ts.service';
+import { EstudianteHttpservice } from '../services/estudiante-http.service';
+
 
 
 @Component({
