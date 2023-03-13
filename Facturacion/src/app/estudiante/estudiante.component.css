@@ -1,0 +1,16 @@
+.p-fluid .p-inputtext {
+    width: none;
+
+  }
+  .ordenar {
+    display: flex;
+    flex-direction: row;
+    
+  }
+.titulo{
+   
+    font-family: 'Courier New', Courier, monospace;
+}
+.buscar{
+    margin-left: auto;
+}

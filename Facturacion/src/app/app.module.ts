@@ -25,7 +25,9 @@ import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MenuItem} from 'primeng/api';
 import {DataViewModule} from 'primeng/dataview';
+import {MenubarModule} from 'primeng/menubar';
 
 @NgModule({
   declarations: [		
@@ -55,6 +57,8 @@ import {DataViewModule} from 'primeng/dataview';
     RouterModule,
     ReactiveFormsModule,
     BrowserAnimationsModule,
+    MenubarModule,
+        
    
 
 
