@@ -13,18 +13,29 @@ import { EstudianteHttpservice } from '../services/estudiante-http.service';
 })
 export class EstudianteComponent implements OnInit {
 
-  
+  cedula! : string;
 
   estudiante: EstudianteModel[] = [];
+  
 
   constructor(private estudiantesService: EstudianteHttpservice) {}
 
   ngOnInit(): void {
+    this.cargardatos;
     this.getEstudiantes2();
 
     
     
     
+  }
+
+  cargardatos(cedula: string) {
+    this.estudiantesService
+      .getone(cedula)
+      .subscribe((response: EstudianteModel[]) => {
+        this.estudiante = response;
+      });
+    console.log(this.estudiante);
   }
 
   getEstudiantes(){
@@ -39,13 +50,14 @@ export class EstudianteComponent implements OnInit {
     const obs2 = this.estudiantesService.getAll2();
     const obs3 = this.estudiantesService.getAll3();
     const obs4 = this.estudiantesService.getAll4();
-    const obs5 = this.estudiantesService.getAll5();
   
-    forkJoin([obs1, obs2, obs3,obs4,obs5]).subscribe(([res1, res2, res3,res4,res5]) => {
-      this.estudiante = [...res1, ...res2, ...res3, ...res4, ...res5];
+  
+    forkJoin([obs1, obs2, obs3,obs4]).subscribe(([res1, res2, res3,res4]) => {
+      this.estudiante = [...res1, ...res2, ...res3, ...res4];
       console.log(this.estudiante);
     });
-  }
+  } 
+  
 
   
 
@@ -53,6 +65,12 @@ export class EstudianteComponent implements OnInit {
     return $event.target.value;
   }
   
+  /* GetOne(cedula:string){
+    this.estudiantesService.getone(cedula).subscribe((response:EstudianteModel[])=>{
+      this.estudiante = response;
+    })
+  } */
+
 
   
   

@@ -12,7 +12,7 @@ export class EstudianteHttpservice {
 
   estudiante: EstudianteModel[] = [];
 
-  readonly URL_API: string =
+   readonly URL_API: string =
    'http://172.31.5.24:8080/WSSIIEPN/webresources/SilaboEPN/carga/0501553408/2022/2';
 
   readonly URL_API2: string =
@@ -24,19 +24,10 @@ export class EstudianteHttpservice {
   readonly URL_API4: string =
    'http://172.31.5.24:8080/WSSIIEPN/webresources/SilaboEPN/carga/0102007176/2022/2';
 
-  readonly URL_API5: string =
-   'http://172.31.5.24:8080/WSSIIEPN/webresources/SilaboEPN/carga/0101827806/2022/2';
+ private readonly URL_API5: string =
+   'http://172.31.5.24:8080/WSSIIEPN/webresources/SilaboEPN/carga/${cedula}/2022/2';
 
 
-  
-
-
-
-
-  readonly apiUrls = ['http://172.31.5.24:8080/WSSIIEPN/webresources/SilaboEPN/carga/0501553408/2022/2', 'http://172.31.5.24:8080/WSSIIEPN/webresources/SilaboEPN/carga/1719387852/2022/2'];
-
-
-  
 
   getAll(): Observable<EstudianteModel[]> {
     return this.httpClient.get<EstudianteModel[]>(this.URL_API);
@@ -47,9 +38,7 @@ export class EstudianteHttpservice {
   getAll4(): Observable<EstudianteModel[]> {
     return this.httpClient.get<EstudianteModel[]>(this.URL_API4);
   }
-  getAll5(): Observable<EstudianteModel[]> {
-    return this.httpClient.get<EstudianteModel[]>(this.URL_API5);
-  }
+
 
   
 
@@ -65,6 +54,12 @@ export class EstudianteHttpservice {
         return combinedResult;
       })
     );
+  } 
+
+
+
+  getone(cedula:string): Observable<EstudianteModel[]>{
+    return this.httpClient.get<EstudianteModel[]>(this.URL_API5.replace('${cedula}',cedula))
   }
 
 
