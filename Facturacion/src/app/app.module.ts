@@ -20,6 +20,12 @@ import {ProgressBarModule} from 'primeng/progressbar';
 import {InputTextModule} from 'primeng/inputtext';
 import {CardModule} from 'primeng/card';
 import {TieredMenuModule} from 'primeng/tieredmenu';
+import {DividerModule} from 'primeng/divider';
+import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {DataViewModule} from 'primeng/dataview';
 
 @NgModule({
   declarations: [		
@@ -44,6 +50,28 @@ import {TieredMenuModule} from 'primeng/tieredmenu';
     SliderModule,
     ToastModule,
     CalendarModule,
+    DividerModule,
+    CommonModule,
+    RouterModule,
+    ReactiveFormsModule,
+    BrowserAnimationsModule,
+   
+
+
+  /*   
+   
+    
+    
+    
+    
+    
+    
+   
+    
+    
+   
+    
+     */
   ],
   providers: [],
   bootstrap: [AppComponent]

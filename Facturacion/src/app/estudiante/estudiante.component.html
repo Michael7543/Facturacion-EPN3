@@ -1,59 +1,77 @@
-<table class="table table-success">
-  <thead>
-    <tr>
-      <th scope="col">codmat</th>
-      <th scope="col">Materia</th>
-      <th scope="col">Paralelo</th>
-      <th scope="col">Horas</th>
-      <th scope="col">aula</th>
-      <th scope="col">ubicacion</th>
-      <th scope="col">Funcion</th>
-      <th scope="col">Est</th>
-      <th scope="col">nroSesiones</th>
-      <th scope="col">Lunes</th>
-      <th scope="col">Martes</th>
-      <th scope="col">Miercoles</th>
-      <th scope="col">Jueves</th>
-      <th scope="col">Viernes</th>
-      <th scope="col">Sabado</th>
-      <th scope="col">hsimul</th>
-      <th scope="col">fecha Inicio</th>
-      <th scope="col">fecha Fin</th>
-      <th scope="col">Horario</th>
-      <th scope="col">codcar</th>
-      <th scope="col">carrera</th>
-      <th scope="col">Facultad</th>  
-    </tr>
-  </thead> 
-  
-  <tbody>
+<div class="mt-5" style="text-align: center; color: blue; font-size: 30px;">SISTEMA DE FACTURACIÓN</div>
+<p-divider type="dashed"></p-divider>
+<div class="container">Tabla de visualizacion de Datos</div>
+<div class="container mt-5">
+  <p-table [value]="estudiante" [globalFilterFields]="[
+  'codmat',
+  'tabla.codmat',
+  'tabla.materia',
+  'tabla.carrera'
+]" [paginator]="true" [rows]="3" [showCurrentPageReport]="true" [tableStyle]="{'min-width': '50rem'}"
+      currentPageReportTemplate="Showing {first} to {last} of {totalRecords} entries" >
+      <ng-template pTemplate="header">
+        <tr>
+          
+          <th scope="col">codmat <p-columnFilter type="text" field="codmat" display="menu"></p-columnFilter></th>
+          <th scope="col">Materia</th>
+          <th scope="col">Paralelo</th>
+          <th scope="col">Horas</th>
+          <th scope="col">aula</th>
+          <th scope="col">ubicacion</th>
+          <th scope="col">Funcion</th>
+          <th scope="col">Est</th>
+          <th scope="col">nroSesiones</th>
+          <th scope="col">Lunes</th>
+          <th scope="col">Martes</th>
+          <th scope="col">Miercoles</th>
+          <th scope="col">Jueves</th>
+          <th scope="col">Viernes</th>
+          <th scope="col">Sabado</th>
+          <th scope="col">hsimul</th>
+          <th scope="col">fecha Inicio</th>
+          <th scope="col">fecha Fin</th>
+          <th scope="col">Horario</th>
+          <th scope="col">codcar</th>
+          <th scope="col">carrera</th>
+          <th scope="col">Facultad</th>  
+        </tr>
+      </ng-template>
+      <ng-template pTemplate="body" let-tabla>
+          <tr >
+            <td>{{tabla.codmat}}</td>
+            <td>{{tabla.materia}}</td>
+            <td>{{tabla.paralelo}}</td>
+            <td>{{tabla.horas}}</td>
+            <td>{{tabla.aula}}</td>
+            <td>{{tabla.ubicacion}}</td>
+            <td>{{tabla.funcion}}</td>
+            <td>{{tabla.est}}</td>
+            <td>{{tabla.nroSesiones}}</td>
+            <td>{{tabla.lunes}}</td>
+            <td>{{tabla.martes}}</td>
+            <td>{{tabla.miercoles}}</td>
+            <td>{{tabla.jueves}}</td>
+            <td>{{tabla.viernes}}</td>
+            <td>{{tabla.sabado}}</td>
+            <td>{{tabla.hSimul}}</td>
+            <td>{{tabla.fechaI}}</td>
+            <td>{{tabla.fechaF}}</td>
+            <td>{{tabla.horarioF}}</td>
+            <td>{{tabla.codcar}}</td>
+            <td>{{tabla.carrera}}</td>
+            <td>{{tabla.facultad}}</td>
+          </tr>
+      </ng-template>
+      <ng-template pTemplate="paginatorleft">
+      </ng-template>
+      <ng-template pTemplate="paginatorright">
+      </ng-template>
+  </p-table>
+</div>
 
-    <tr *ngFor="let tabla of estudiante">
-      <td>{{tabla.codmat}}</td>
-      <td>{{tabla.materia}}</td>
-      <td>{{tabla.paralelo}}</td>
-      <td>{{tabla.horas}}</td>
-      <td>{{tabla.aula}}</td>
-      <td>{{tabla.ubicacion}}</td>
-      <td>{{tabla.funcion}}</td>
-      <td>{{tabla.est}}</td>
-      <td>{{tabla.nroSesiones}}</td>
-      <td>{{tabla.lunes}}</td>
-      <td>{{tabla.martes}}</td>
-      <td>{{tabla.miercoles}}</td>
-      <td>{{tabla.jueves}}</td>
-      <td>{{tabla.viernes}}</td>
-      <td>{{tabla.sabado}}</td>
-      <td>{{tabla.hSimul}}</td>
-      <td>{{tabla.fechaI}}</td>
-      <td>{{tabla.fechaF}}</td>
-      <td>{{tabla.horarioF}}</td>
-      <td>{{tabla.codcar}}</td>
-      <td>{{tabla.carrera}}</td>
-      <td>{{tabla.facultad}}</td>
-    </tr>
-  </tbody>
-</table>
+
+
+
 
 <!-- <p-card header="Simple Card" [style]="{'width': '25rem', 'margin-bottom': '2em'}">
   <ng-template pTemplate="header">
