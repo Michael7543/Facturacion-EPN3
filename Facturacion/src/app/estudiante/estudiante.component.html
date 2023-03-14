@@ -1,9 +1,9 @@
 
 
-<div class="p-4 titulo" style="text-align: center; color: blue; font-size: 50px; background-color: rgba(247, 244, 239, 0.789);">SISTEMA DE FACTURACIÓN</div>
+<div class="p-4 titulo" style="text-align: center; color: blue; font-size: 50px; background-color: rgba(247, 244, 239, 0.789);">SISTEMA DE Imformación</div>
 <p-divider type="dashed"></p-divider>
 
-<div class="p-d-flex p-jc-center p-ai-center filter__card">
+<div class="container mb-3 p-d-flex p-jc-center p-ai-center filter__card">
   <form id="form" (submit)="cargardatos(cedula.value)">
     <div class="p-fluid form__filter">
       <div class="p-field">
@@ -50,7 +50,7 @@
   'carrera',
   'facultad'
 
-]" [paginator]="true" [rows]="3" [showCurrentPageReport]="true" [tableStyle]="{'min-width': '50rem'}" styleClass="p-datatable-stiped" dataKey="id"
+]" [paginator]="true" [rows]="3" [showCurrentPageReport]="true" styleClass="p-datatable-lg" [tableStyle]="{'min-width': '50rem'}"  dataKey="id" [resizableColumns]="true"
  
       >
       <ng-template pTemplate="caption">
