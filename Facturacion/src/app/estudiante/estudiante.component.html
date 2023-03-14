@@ -10,18 +10,24 @@
 </div>
 </div>
 
-  <form class="container mb-3 mt-5 " (submit)="buscardatos(cedula.value,fecha.value)">
+  <form class="container mb-3 mt-5 " (submit)="buscardatos(cedula.value,fecha.value,id.value)">
     <div class="buscador">
       <div class="p-field">
         <span class="p-float-label">
-          <input #cedula type="text" pInputText />
+          <input #cedula type="number" pInputText />
           <label for="cedula">Cedula</label>
         </span>
       </div>
-      <div class="p-field">
+      <div style="margin-left: 20px;"  class="p-field">
         <span class="p-float-label">
-          <input #fecha type="text" pInputText />
-          <label for="cedula">Fecha</label>
+          <input #fecha type="number" pInputText />
+          <label for="fecha"> Fecha</label>
+        </span>
+      </div>
+      <div style="margin-left: 20px;">
+        <span class="p-float-label">
+          <p-dropdown #id type="text"  [options]="[{label:'1', value:1}, {label:'2', value:2}]" [(ngModel)]="selectedId"></p-dropdown>
+          <label for="id">ID</label>
         </span>
       </div>
       <div class="p-field">

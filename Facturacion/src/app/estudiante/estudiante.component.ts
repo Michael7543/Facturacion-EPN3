@@ -15,6 +15,9 @@ export class EstudianteComponent implements OnInit {
 
   cedula! : string;
   fecha! : string;
+  id! : string;
+
+  selectedId! : number;
 
   estudiante: EstudianteModel[] = [];
   
@@ -30,9 +33,9 @@ export class EstudianteComponent implements OnInit {
     
   }
 
-  buscardatos(cedula: string,fecha:string) {
+  buscardatos(cedula: string,fecha:string,id:string) {
     this.estudiantesService
-      .getone(cedula,fecha)
+      .getone(cedula,fecha,id)
       .subscribe((response: EstudianteModel[]) => {
         this.estudiante = response;
       });
@@ -81,7 +84,7 @@ export class EstudianteComponent implements OnInit {
   } */
 
 
-  
+
   
 
 
