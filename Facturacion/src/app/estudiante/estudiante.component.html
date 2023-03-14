@@ -1,11 +1,20 @@
+<div class="" style="background-color: rgba(247, 244, 239, 0.789);">
+
+<div class="row" style="width: 100%;">
+<div class="col-sm-12 col-md-6 col-lg-1 text-center">
+<img class="imagen" src="https://economia.epn.edu.ec/images/img/EPN_logo_big.png" alt="">
+</div>
+<div class="col-sm-12 col-md-6 col-lg-11 text-center">
+  <p class="titulo " style="color: blue; font-size: 50px; margin-top: 50px;">SISTEMA DE IMFORMACIÓN</p>
+</div>
+</div>
+</div>
 
 
-<div class="p-4 titulo" style="text-align: center; color: blue; font-size: 50px; background-color: rgba(247, 244, 239, 0.789);">SISTEMA DE Imformación</div>
-<p-divider type="dashed"></p-divider>
 
-<div class="container mb-3 p-d-flex p-jc-center p-ai-center filter__card">
-  <form id="form" (submit)="cargardatos(cedula.value)">
-    <div class="p-fluid form__filter">
+
+  <form class="container mb-3 mt-5 " (submit)="buscardatos(cedula.value)">
+    <div class="buscador">
       <div class="p-field">
         <span class="p-float-label">
           <input #cedula type="text" pInputText />
@@ -13,16 +22,17 @@
         </span>
       </div>
       <div class="p-field">
-        <button class="p-button-rounded" type="submit" pButton>Buscar</button>
+        <button class="p-button boton" type="submit" pButton>Buscar</button>
       </div>
     </div>
   </form>
-</div>
+
+  <p-divider type="dashed"></p-divider>
 
 
-<div class="container p-card  mt-2">
-  
-  <div class="p-3" style="font-weight: bolder; text-align: center; font-weight: bold;">TABLA DE VISUALIZACION DE DATOS POR CEDULA</div>
+<div class="container p-card  shadow-8">
+  <div class="p-3" style="font-weight: bolder; text-align: center; font-weight: bold; margin-top: 35px;">TABLA DE VISUALIZACION DE DATOS</div>
+
   <p-table #dt [value]="estudiante" [globalFilterFields]="[
   'codmat',
   'materia',
@@ -50,7 +60,7 @@
   'carrera',
   'facultad'
 
-]" [paginator]="true" [rows]="3" [showCurrentPageReport]="true" styleClass="p-datatable-lg" [tableStyle]="{'min-width': '50rem'}"  dataKey="id" [resizableColumns]="true"
+]" [paginator]="true" [rows]="3" [showCurrentPageReport]="true" [tableStyle]="{'min-width': '50rem'}"  dataKey="id" [resizableColumns]="true"
  
       >
       <ng-template pTemplate="caption">
@@ -201,30 +211,10 @@
       <ng-template pTemplate="paginatorright">
       </ng-template>
   </p-table>
+
 </div>
 
 
 
 
 
-
-<!-- <p-card header="Simple Card" [style]="{'width': '25rem', 'margin-bottom': '2em'}">
-  <ng-template pTemplate="header">
-      <img alt="Card" src="https://primefaces.org/cdn/primeng/images/usercard.png">
-  </ng-template>
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error repudiandae numquam deserunt
-      quisquam repellat libero asperiores earum nam nobis, culpa ratione quam perferendis esse, cupiditate neque quas!</p>
-</p-card>
-
-<p-card header="Advanced Card" subheader="Card Subheader" [style]="{width: '360px'}" styleClass="p-card-shadow">
-  <ng-template pTemplate="header">
-      <img alt="Card" src="https://primefaces.org/cdn/primeng/images/usercard.png">
-  </ng-template>
-  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore sed consequuntur error repudiandae numquam deserunt
-      quisquam repellat libero asperiores earum nam nobis, culpa ratione quam perferendis esse, cupiditate neque quas!</p>
-  <ng-template pTemplate="footer">
-      <p-button label="Save" icon="pi pi-check"></p-button>
-      <p-button label="Cancel" icon="pi pi-times" styleClass="p-button-secondary" [style]="{'margin-left': '.5em'}"></p-button>
-  </ng-template>
-</p-card>
- -->

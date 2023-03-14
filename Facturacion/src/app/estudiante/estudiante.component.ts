@@ -21,7 +21,7 @@ export class EstudianteComponent implements OnInit {
   constructor(private estudiantesService: EstudianteHttpservice) {}
 
   ngOnInit(): void {
-    this.cargardatos;
+    this.buscardatos;
     this.getEstudiantes();
 
     
@@ -29,7 +29,7 @@ export class EstudianteComponent implements OnInit {
     
   }
 
-  cargardatos(cedula: string) {
+  buscardatos(cedula: string) {
     this.estudiantesService
       .getone(cedula)
       .subscribe((response: EstudianteModel[]) => {

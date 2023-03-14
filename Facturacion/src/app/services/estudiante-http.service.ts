@@ -11,6 +11,7 @@ export class EstudianteHttpservice {
   constructor(private httpClient: HttpClient) {}
 
   estudiante: EstudianteModel[] = [];
+  
 
   readonly URL_API: string =
    'http://172.31.5.24:8080/WSSIIEPN/webresources/SilaboEPN/carga/${cedula}/2022/2';
@@ -52,7 +53,9 @@ export class EstudianteHttpservice {
   
 
 
-
+  getone(cedula:string): Observable<EstudianteModel[]>{
+    return this.httpClient.get<EstudianteModel[]>(this.URL_API.replace('${cedula}',cedula))
+  }
 
 
   getAll1(): Observable<EstudianteModel[]> {
@@ -90,27 +93,11 @@ export class EstudianteHttpservice {
   }
 
 
+
+
+
+
   
-
-/*   getAll3(): Observable<EstudianteModel[]> {
-    const obs1 = this.httpClient.get<EstudianteModel[]>(this.URL_API);
-    const obs2 = this.httpClient.get<EstudianteModel[]>(this.URL_API2);
-    const obs3 = this.httpClient.get<EstudianteModel[]>(this.URL_API3);
-    
-  
-    return forkJoin([obs1, obs2,obs3]).pipe(
-      map(([res1, res2]) => {
-        const combinedResult = [...res1, ...res2];
-        return combinedResult;
-      })
-    );
-  }  */
-
-
-
-  getone(cedula:string): Observable<EstudianteModel[]>{
-    return this.httpClient.get<EstudianteModel[]>(this.URL_API.replace('${cedula}',cedula))
-  }
 
 
 
