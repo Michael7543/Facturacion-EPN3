@@ -14,7 +14,7 @@ export class EstudianteHttpservice {
   
 
   readonly URL_API: string =
-   'http://172.31.5.24:8080/WSSIIEPN/webresources/SilaboEPN/carga/${cedula}/2022/2';
+   'http://172.31.5.24:8080/WSSIIEPN/webresources/SilaboEPN/carga/${cedula}/${fecha}/2';
 
   readonly URL_API1: string =
    'http://172.31.5.24:8080/WSSIIEPN/webresources/SilaboEPN/carga/0101827806/2022/2';
@@ -53,8 +53,8 @@ export class EstudianteHttpservice {
   
 
 
-  getone(cedula:string): Observable<EstudianteModel[]>{
-    return this.httpClient.get<EstudianteModel[]>(this.URL_API.replace('${cedula}',cedula))
+  getone(cedula:string,fecha:string): Observable<EstudianteModel[]>{
+    return this.httpClient.get<EstudianteModel[]>(this.URL_API.replace('${cedula}',cedula).replace('${fecha}',fecha))
   }
 
 

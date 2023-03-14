@@ -58,10 +58,9 @@ import {MenubarModule} from 'primeng/menubar';
     ReactiveFormsModule,
     BrowserAnimationsModule,
     MenubarModule,
+    FormsModule
         
    
-
-
   /*   
    
     

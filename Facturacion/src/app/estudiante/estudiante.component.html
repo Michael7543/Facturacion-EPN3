@@ -10,15 +10,18 @@
 </div>
 </div>
 
-
-
-
-  <form class="container mb-3 mt-5 " (submit)="buscardatos(cedula.value)">
+  <form class="container mb-3 mt-5 " (submit)="buscardatos(cedula.value,fecha.value)">
     <div class="buscador">
       <div class="p-field">
         <span class="p-float-label">
           <input #cedula type="text" pInputText />
           <label for="cedula">Cedula</label>
+        </span>
+      </div>
+      <div class="p-field">
+        <span class="p-float-label">
+          <input #fecha type="text" pInputText />
+          <label for="cedula">Fecha</label>
         </span>
       </div>
       <div class="p-field">
@@ -28,7 +31,6 @@
   </form>
 
   <p-divider type="dashed"></p-divider>
-
 
 <div class="container p-card  shadow-8">
   <div class="p-3" style="font-weight: bolder; text-align: center; font-weight: bold; margin-top: 35px;">TABLA DE VISUALIZACION DE DATOS</div>
