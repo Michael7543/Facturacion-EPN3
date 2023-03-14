@@ -18,6 +18,7 @@ export class EstudianteComponent implements OnInit {
   id! : string;
 
   selectedId! : number;
+  selectedcedula! : string;
 
   estudiante: EstudianteModel[] = [];
   
